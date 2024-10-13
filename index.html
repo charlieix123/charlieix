@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>999 Shopping Mall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>999 Shopping Mall</h1>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li onclick="filterProducts('all')">All</li>
+                <li onclick="filterProducts('shoes')">Shoes</li>
+                <li onclick="filterProducts('clothes')">Clothes</li>
+                <li onclick="filterProducts('accessories')">Accessories</li>
+            </ul>
+        </div>
+        <div class="products">
+            <h2>Latest Products</h2>
+            <div id="latest-products"></div>
+            <h2>Products</h2>
+            <div id="product-list"></div>
+        </div>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <button id="checkout-button" onclick="showCheckout()">Checkout</button>
+        </div>
+    </main>
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Checkout</h2>
+            <div id="payment-methods">
+                <button onclick="selectPayment('cash')">Cash on Delivery</button>
+                <button onclick="selectPayment('online')">Online Payment</button>
+            </div>
+            <div id="payment-details"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
